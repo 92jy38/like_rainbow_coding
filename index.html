@@ -76,6 +76,58 @@
             }
         }
     </style>
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+        import { getFirestore } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+        import { collection, addDoc } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+        import { getDocs } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+
+        const firebaseConfig = {
+          apiKey: "AIzaSyAsedDddTIwaduWnsKMobXdU_Jm5XFDrDY",
+          authDomain: "spartaproject-ee6da.firebaseapp.com",
+          projectId: "spartaproject-ee6da",
+          storageBucket: "spartaproject-ee6da.appspot.com",
+          messagingSenderId: "297403825440",
+          appId: "1:297403825440:web:660ca7dda852fd8b0bab45",
+          measurementId: "G-66WDL32E4J"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+
+        function insertData(){
+            let name = $("#name").val();
+            let comment = $("#comment").val();
+
+            try {
+                const docRef = await addDoc(collection(db, "guestbooks"), {
+                    'name': name,
+                    'comment': comment
+                });
+
+                alert("방명록 등록");
+                window.location.reload();
+            } catch (e) {
+                console.error("Error adding document: ", e);
+            }
+        }
+        /*
+        $("#댓글").empty();
+
+        const querySnapshot = await getDocs(collection(db, "guestbooks"));
+
+        querySnapshot.forEach((doc) => {
+
+            let name = doc.data().name;
+            let comment = doc.data().comment;
+
+            let tempHtml = `
+            `;
+
+        $(".댓글").append(tempHtml);
+        */
+    </script>
 
 </head>
 
