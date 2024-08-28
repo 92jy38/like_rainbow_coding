@@ -12,7 +12,14 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
     <style>
+         @font-face {
+            font-family: '양진체';
+            src: url('https://fastly.jsdelivr.net/gh/supernovice-lab/font@0.9/yangjin.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
         * {
+            font-family: '양진체';
             margin: 0;
             padding: 0;
 
@@ -39,13 +46,15 @@
                 padding-top: 15px;
                 margin: 0;
                 box-sizing: border-box;
+                background-image: url("Group\ 4.png");
+                text-align: right;
             }
 
             header a .rb_img {
                 width: 100px;
             }
 
-            header h1{width: 85%;
+            header h1{width: 80%;
                 padding-top: 10px;
                 text-align: center;
                 color: #FFFFFF;
@@ -54,6 +63,9 @@
             }
         header h1 p{
             color: #FFFFFF;
+            width: 85%;
+            padding-top: 10px;
+            text-align: right;
         }
         
   /*!!!!!!!!!섹션1 자기소개!!!!!!!!!!!*/
@@ -121,11 +133,10 @@
 <body>
     <div class="wrap">
         <header>
-            <a><img src="/rainbow.png" alt="" srcset="" class="rb_img"></a>
+            <a><img src="./rainbow.png" alt="" srcset="" class="rb_img"></a>
             <h1>무지개_같은_코딩 <br>
-                <p>(간단한 팀 목표)</p>
+                <p class = "right" style="font-size: 20px">(간단한 팀 목표)</p>
             </h1>
-            <p>(간단한 팀 목표)</p>
         </header>
         <section class="sec1">
             
