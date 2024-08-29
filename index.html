@@ -12,12 +12,13 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
     <style>
-         @font-face {
+        @font-face {
             font-family: '양진체';
             src: url('https://fastly.jsdelivr.net/gh/supernovice-lab/font@0.9/yangjin.woff') format('woff');
             font-weight: normal;
             font-style: normal;
         }
+
         * {
             font-family: '양진체';
             margin: 0;
@@ -41,40 +42,62 @@
 
             /*!!!!!!!!!!!!!!!! 헤더!!!!!!!!!!!!!!!!! */
             header {
-                display: flex;
-                height: 100vh;
+
+                display: inline-grid;
+                height: 300px;
                 width: 100vw;
                 overflow: hidden;
                 padding-left: 10px;
-                padding-top: 15px;
+                /* padding-top: 15px; */
                 margin: 0;
                 box-sizing: border-box;
                 background-image: url("Group\ 4.png");
-                text-align: right;
+                background-position: -10%;
+                /* text-align: right; */
+                margin-bottom: 200px;
             }
 
             header a .rb_img {
-                width: 100px;
+                width: 150px;
+                padding-top: 20px;
             }
 
-            header h1{width: 80%;
+
+            header a {
+                width: 80px;
+                height: 100px;
+                padding-left: 80px;
                 padding-top: 10px;
+            }
+
+
+            header h1 {padding-bottom: 80px;
+                width: 1810px;
+                font-size: 90px;
                 text-align: center;
                 color: #FFFFFF;
-
+                -webkit-text-stroke: 3px #4b4b4b;
 
             }
-        header h1 p{
-            color: #FFFFFF;
-            width: 85%;
-            padding-top: 10px;
-            text-align: right;
-        }
-        
-  /*!!!!!!!!!섹션1 자기소개!!!!!!!!!!!*/
+
+            header h1:hover {
+                color: #000000;
+                -webkit-text-stroke: 3px #FFFFFF;
+                transition: 1s;
+            }
+
+            header p {
+                color: #FFFFFF;
+                width: 1050px;
+                padding-top: 10px;
+                text-align: right;
+            }
+
+            /*!!!!!!!!!섹션1 자기소개!!!!!!!!!!!*/
 
             header h1 p {
                 color: #FFFFFF;
+                
             }
 
             /*!!!!!!!!!섹션1 자기소개!!!!!!!!!!!*/
@@ -88,9 +111,23 @@
             }
 
             /*!!!!!!!!!섹션2 방명록!!!!!!!!!!!*/
-            .sec2 {padding-top: 100px;
+            .sec2 {
+                padding-top: 100px;
                 text-align: center;
             }
+
+            .sec2 input {padding: 10px 10px;
+                color: #000000;
+                font-size: 15px;
+            }
+
+           .sec2 .s2_line{width: 100%;
+            height: 30px;
+        color: #fffdfd;}
+
+        .sec2 .comment{}
+
+
         }
     </style>
     <script type="module">
@@ -100,20 +137,20 @@
         import { getDocs } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
 
         const firebaseConfig = {
-          apiKey: "AIzaSyAsedDddTIwaduWnsKMobXdU_Jm5XFDrDY",
-          authDomain: "spartaproject-ee6da.firebaseapp.com",
-          projectId: "spartaproject-ee6da",
-          storageBucket: "spartaproject-ee6da.appspot.com",
-          messagingSenderId: "297403825440",
-          appId: "1:297403825440:web:660ca7dda852fd8b0bab45",
-          measurementId: "G-66WDL32E4J"
+            apiKey: "AIzaSyAsedDddTIwaduWnsKMobXdU_Jm5XFDrDY",
+            authDomain: "spartaproject-ee6da.firebaseapp.com",
+            projectId: "spartaproject-ee6da",
+            storageBucket: "spartaproject-ee6da.appspot.com",
+            messagingSenderId: "297403825440",
+            appId: "1:297403825440:web:660ca7dda852fd8b0bab45",
+            measurementId: "G-66WDL32E4J"
         };
 
         const app = initializeApp(firebaseConfig);
         const db = getFirestore(app);
 
 
-        function insertData(){
+        function insertData() {
             let name = $("#name").val();
             let comment = $("#comment").val();
 
@@ -151,10 +188,9 @@
 <body>
     <div class="wrap">
         <header>
-            <a><img src="./rainbow.png" alt="" srcset="" class="rb_img"></a>
-            <h1>무지개_같은_코딩 <br>
-                <p class = "right" style="font-size: 20px">(간단한 팀 목표)</p>
-            </h1>
+            <a><img src="./rainbow.png" class="rb_img"></a>
+            <h1>무지개_같은_코딩</h1>
+            <!-- <p class="right" style="font-size: 25px">( 철자와 발음에 유의하세요 )</p> -->
         </header>
         <section class="sec1">
 
@@ -202,10 +238,24 @@
         </section>
         <section class="sec2">
             <h3>방명록</h3>
-            <div class="s2_input"></div>
-        </section>
-        <section class="sec3">
-        </section>
+            <div class="s2_div">
+                <form action="">
+
+                    <div class="s2_name"><label for="inputName">이름</label>
+                        <input type="text" id="inputName">
+                    </div>
+
+                    <div class="s2_line"></div>
+
+                    <div class="comment">
+                        <p>남기실 말씀<textarea cols="40" rows="10"></textarea></p>
+                    </div>
+                </form>
+            </div>
+    </div>
+    </section>
+    <section class="sec3">
+    </section>
 
     </div>
 
