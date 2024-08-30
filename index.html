@@ -251,7 +251,7 @@
             justify-content: center;
         }
     </style>
-     <script type="module">
+    <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
         import { getFirestore } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
         import { collection, addDoc } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
@@ -288,7 +288,7 @@
             }
         });
 
-        
+
         $("#comment-area").empty();
 
         const querySnapshot = await getDocs(collection(db, "guestbooks"));
@@ -311,7 +311,7 @@
 
             $("#comment-area").append(tempHtml);
         });
-        
+
     </script>
 
 </head>
@@ -337,7 +337,7 @@
                                             aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body custom-modal-content">
-                                        <img src="./img./모달홍주영.jpg" alt="홍주영" class="img-fluid">
+                                        <img src="./img/모달홍주영.jpg" alt="홍주영" class="img-fluid">
                                         <div class="modal-text-content">
                                             <h5>ENFP=55% : ISTJ=45%</h5>
                                             <h5>둥글둥글해서 푸근한 이미지?</h5>
@@ -384,12 +384,13 @@
                                             aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body custom-modal-content">
-                                        <img src="./img./모달고아라.jpeg" alt="고아라" class="img-fluid">
+                                        <img src="./img/모달고아라.jpeg" alt="고아라" class="img-fluid">
                                         <div class="modal-text-content">
                                             <h5>ENTP</h5>
                                             <h5>지적 호기심 못참음, 영어에 거부감 없음</h5>
                                             <h5>TMI</h5>
-                                            <p>러시아어 자격증(TORFL)<br> 차 마시기<br> 파이썬 한 스푼<br>개발이 재밌어보여 취미삼으려다 진로 변경<br>모기 극혐</p>
+                                            <p>러시아어 자격증(TORFL)<br> 차 마시기<br> 파이썬 한 스푼<br>개발이 재밌어보여 취미삼으려다 진로 변경<br>모기 극혐
+                                            </p>
                                             <br>
                                             <h5>https://velog.io/@gteaclub/posts</h5>
                                         </div>
@@ -430,7 +431,7 @@
                                             aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body custom-modal-content">
-                                        <img src="./img./모달박지예.jpg" alt="박지예" class="img-fluid">
+                                        <img src="./img/모달박지예.jpg" alt="박지예" class="img-fluid">
                                         <div class="modal-text-content">
                                             <h5>ISTP</h5>
                                             <h5>원영적 사고로 책임감 있는 마무리</h5>
@@ -476,7 +477,7 @@
                                             aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body custom-modal-content">
-                                        <img src="./img./모달김학진.jpg" alt="김학진" class="img-fluid">
+                                        <img src="./img/모달김학진.jpg" alt="김학진" class="img-fluid">
                                         <div class="modal-text-content">
                                             <h5>ENTJ</h5>
                                             <h5>분석 MASTER</h5>
@@ -523,7 +524,7 @@
                                             aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body custom-modal-content">
-                                        <img src="./img./모달이미현.jpg" alt="이미현" class="img-fluid">
+                                        <img src="./img/모달이미현.jpg" alt="이미현" class="img-fluid">
                                         <div class="modal-text-content">
                                             <h5>ESTJ</h5>
                                             <h5>원영적 사고로 끝없는 도전</h5>
@@ -564,7 +565,7 @@
             </div>
         </section>
         <section class="sec2">
-            <div class = "container">
+            <div class="container">
                 <div class="row">
                     <h3>방명록</h3>
                 </div>
@@ -583,21 +584,22 @@
                             <label for="comment">남기실 말씀</label>
                             <input type="text" id="comment">
                         </div>
-                        <div class="row" style="margin-top:150px;" >
+                        <div class="row" style="margin-top:150px;">
                             <!-- <input type="submit" value="방명록 남기기" class="submit"> -->
-                            <button class="col-1" id="addBtn" style="margin:0 auto; float: none; border:#fffdfd solid 1px; border-radius:10px; height: 50px; background: none;">
-                            작성하기
-                                </button>
+                            <button class="col-1" id="addBtn"
+                                style="margin:0 auto; float: none; border:#fffdfd solid 1px; border-radius:10px; height: 50px; background: none;">
+                                작성하기
+                            </button>
                         </div>
 
                     </div>
                 </div>
             </div>
-        </section>      
-    <section class="sec3">
-        <div class="container" id="comment-area" style="color:white"> 
-        </div>
-    </section>
+        </section>
+        <section class="sec3">
+            <div class="container" id="comment-area" style="color:white">
+            </div>
+        </section>
 
     </div>
 
